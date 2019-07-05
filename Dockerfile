@@ -13,6 +13,8 @@ RUN gcloud components install kubectl -q
 
 COPY scripts/docker-entrypoint.sh docker-entrypoint.sh
 
+LABEL com.circleci.preserve-entrypoint=true
+
 ENTRYPOINT ["./docker-entrypoint.sh"]
 
 CMD ["/bin/bash"]
