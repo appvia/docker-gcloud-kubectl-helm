@@ -1,7 +1,7 @@
 FROM google/cloud-sdk:alpine
 
 # install base packages
-RUN apk add -U coreutils openssl
+RUN apk add -U coreutils openssl jq
 
 # install helm and kubectl
 RUN curl -LO https://git.io/get_helm.sh && \
